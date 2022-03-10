@@ -4,13 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "cross-env NODE_ENV=production npm-run-all clean -p build",
-    "build:eleventy":"eleventy",
-    "build:webpack":"webpack",
-    "clean": :"rimraf _site",
-    "start":"npm-run-all clean -p build:* -p start:*",
-    "start:eleventy":"eleventy --serve --quiet",
-    "start:webpack":"webpack --watch",
+    "build": "npx eleventy",
     "dev": "npx eleventy --watch --serve",
     "now-build": "npm run build",
     "debug": "DEBUG=* npx eleventy"
